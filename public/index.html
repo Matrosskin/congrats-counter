@@ -39,6 +39,7 @@
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+    <script src="/sha256.min.js"></script>
   </head>
   <body>
     <div id="message">
@@ -107,8 +108,9 @@
             congratsEl.textContent = obj.congrats;
 
             const database = firebase.database();
+            const counterKey = sha256(base64);
             let counterValue = 0;
-            var starCountRef = database.ref('counters/' + base64 + '/value');
+            var starCountRef = database.ref('counters/' + counterKey + '/value');
             starCountRef.on('value', (snapshot) => {
               const data = snapshot.val();
               // updateStarCount(postElement, data);
@@ -127,7 +129,7 @@
               });
 
               isCountingBlocked = true;
-              database.ref('counters/' + base64 + '/value').set(counterValue + 1);
+              database.ref('counters/' + counterKey + '/value').set(counterValue + 1);
               setTimeout(() => {
                 isCountingBlocked = false;
               }, 1000);
