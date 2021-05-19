@@ -91,11 +91,17 @@
           loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
         }
 
+        try {
+          firebase.analytics().logEvent('page_loaded');
+        } catch (error) {
+          console.error('Error on logging event:', error);
+        }
+
         const titleEl = document.querySelector('#title');
         const congratsEl = document.querySelector('#congrats');
         const counterEl = document.querySelector('#counter');
         const countMeEl = document.querySelector('#countMe');
-        
+
         if (location.search) {
           try {
             const base64 = location.search.replace('?', '');
