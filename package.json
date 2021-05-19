@@ -1,0 +1,19 @@
+{
+  "name": "congrats-counter",
+  "version": "1.0.0",
+  "description": "Page to congratulate friends and count congratulations for them.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Matrosskin/congrats-counter.git"
+  },
+  "author": "Irklievskiy Eugen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matrosskin/congrats-counter/issues"
+  },
+  "homepage": "https://github.com/Matrosskin/congrats-counter#readme"
+}
