@@ -4,13 +4,15 @@
   "description": "Page to congratulate friends and count congratulations for them.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "echo 'Hello Congrats Counter!'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "firebase emulators:start"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/Matrosskin/congrats-counter.git"
   },
-  "author": "Irklievskiy Eugen",
+  "author": "Eugen Irklievskiy",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Matrosskin/congrats-counter/issues"
